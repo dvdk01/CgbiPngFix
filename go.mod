@@ -1,3 +1,3 @@
-module github.com/poolqa/CgbiPngFix
+module github.com/dvdk01/CgbiPngFix
 
-go 1.14
+go 1.21

@@ -5,11 +5,11 @@ import (
 	"flag"
 	"fmt"
 	"image/png"
-	"io/ioutil"
+	"io"
 	"log"
 	"os"
 
-	"github.com/poolqa/CgbiPngFix/ipaPng"
+	"github.com/dvdk01/CgbiPngFix/ipaPng"
 )
 
 type CommandOptions struct {
@@ -60,7 +60,7 @@ func doCgbiToPng(input string, output string) {
 	if err != nil {
 		log.Fatal(err)
 	}
-	b, err := ioutil.ReadAll(f)
+	b, err := io.ReadAll(f)
 	f.Close()
 	if err != nil {
 		log.Fatal(err)
